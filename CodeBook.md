@@ -3,15 +3,24 @@
 ### Description
 Additional information about the variables, data and transformations used in the course project for the Johns Hopkins Getting and Cleaning Data course.
 
-### Data Set Information
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+### Overview
+30 volunteers performed 6 different activities while wearing a smartphone. The smartphone captured various data about their movements.
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+### Files
+features.txt: Names of the 561 features.
+activity_labels.txt: Names and IDs for each of the 6 activities.
+X_train.txt: 7352 observations of the 561 features, for 21 of the 30 volunteers.
+subject_train.txt: A vector of 7352 integers, denoting the ID of the volunteer related to each of the observations in X_train.txt.
+y_train.txt: A vector of 7352 integers, denoting the ID of the activity related to each of the observations in X_train.txt.
+X_test.txt: 2947 observations of the 561 features, for 9 of the 30 volunteers.
+subject_test.txt: A vector of 2947 integers, denoting the ID of the volunteer related to each of the observations in X_test.txt.
+y_test.txt: A vector of 2947 integers, denoting the ID of the activity related to each of the observations in X_test.txt.
 
-### Attribute Information
-For each record in the dataset it is provided: 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
+### Variables
+1. X_train, y_train, X_test, y_test, subject_train and subject_test contain the data from the downloaded files.
+2. x_all, y_all and subject_all merge the previous datasets to further analysis.
+3. features contains the correct names for the x_all dataset, which are applied to the column names stored in features_mean_std, a numeric vector used to extract the desired data.
+4. A similar approach is taken with activity names through the activity_labels variable.
+5. x_extract contains a table with the features selected
+6. all_data merges x_all, y_all and subject_all in a big dataset.
+7. Finally, tidy contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply numcolwise() and ease the development.
