@@ -7,14 +7,14 @@ Additional information about the variables, data and transformations used in the
 30 volunteers performed 6 different activities while wearing a smartphone. The smartphone captured various data about their movements.
 
 ### Files
-features.txt: Names of the 561 features.
-activity_labels.txt: Names and IDs for each of the 6 activities.
-X_train.txt: 7352 observations of the 561 features, for 21 of the 30 volunteers.
-subject_train.txt: A vector of 7352 integers, denoting the ID of the volunteer related to each of the observations in X_train.txt.
-y_train.txt: A vector of 7352 integers, denoting the ID of the activity related to each of the observations in X_train.txt.
-X_test.txt: 2947 observations of the 561 features, for 9 of the 30 volunteers.
-subject_test.txt: A vector of 2947 integers, denoting the ID of the volunteer related to each of the observations in X_test.txt.
-y_test.txt: A vector of 2947 integers, denoting the ID of the activity related to each of the observations in X_test.txt.
+1. features.txt: Names of the 561 features.
+2. activity_labels.txt: Names and IDs for each of the 6 activities.
+3. X_train.txt: 7352 observations of the 561 features, for 21 of the 30 volunteers.
+4. subject_train.txt: A vector of 7352 integers, denoting the ID of the volunteer related to each of the observations in X_train.txt.
+5. y_train.txt: A vector of 7352 integers, denoting the ID of the activity related to each of the observations in X_train.txt.
+6. X_test.txt: 2947 observations of the 561 features, for 9 of the 30 volunteers.
+7. subject_test.txt: A vector of 2947 integers, denoting the ID of the volunteer related to each of the observations in X_test.txt.
+8. y_test.txt: A vector of 2947 integers, denoting the ID of the activity related to each of the observations in X_test.txt.
 
 ### Variables
 1. X_train, y_train, X_test, y_test, subject_train and subject_test contain the data from the downloaded files.
